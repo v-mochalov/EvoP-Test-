@@ -1,0 +1,92 @@
+.news {
+  padding-bottom: 100px;
+  &__heading {
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  &__wrapper {
+    display: flex;
+
+    justify-content: space-between;
+    @include md-d {
+      flex-direction: column;
+    }
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    width: 400px;
+    &:last-child {
+      margin-right: 0;
+    }
+    @include xl-d {
+      width: 350px;
+    }
+    @include md-d {
+      margin-right: 10px;
+      margin-left: 10px;
+      width: 400px;
+    }
+  }
+  &__img {
+    height: 252px;
+    @include xl-d {
+      height: 200px;
+    }
+    @include md-d {
+      height: 252px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }
+  &__title {
+    margin-top: 30px;
+    color: #090a0b;
+  }
+  &__text {
+    margin-top: 10px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    color: #a9aeb4;
+  }
+
+  //Slick settings
+  .slick-track {
+    min-width: 0;
+    display: flex;
+    align-items: flex-start;
+    @include md-d {
+      flex-wrap: wrap;
+    }
+  }
+  .slick-list {
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+  }
+  .slick-dots {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .slick-dots li {
+    margin: 0 10px;
+  }
+  .slick-dots button {
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $dotsCol;
+  }
+  .slick-dots li.slick-active button {
+    background-color: $dotsActiveCol;
+  }
+}
